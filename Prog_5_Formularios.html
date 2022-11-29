@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang = "es"> <!-- El atributo lang indica el idioma del archivo HTML. -->
+
+  <head>
+
+    <!-- Etiquetas de metadatos para navegadores web. -->
+
+    <meta charset = "UTF-8">
+    <meta name = "description" content = "Descripción del Sitio Web">
+    <meta name = "keywords" content = "palabra_1, palabra_2, palabra_3">
+    <meta name = "author" content = "Nombre del Autor">
+
+    <!-- Etiquetas de metadatos para redes sociales. -->
+
+    <meta property = "og:title" content = "Título de la Página">
+    <meta property = "og:description" content = "Descripción de la Página">
+    <meta property = "og:url" content = "Liga del Sitio">
+
+    <!-- Enlace de imagen favicon. -->
+
+    <link rel = "icon" type = "image/x-icon" href = "assets/images/favicon.ico">
+
+    <!-- Título de la página -->
+
+    <title> Título de la Página </title>
+
+  </head>
+
+  <body>
+
+    <!--
+      
+      El atributo action indica el documento al que se enviarán los datos del formulario.
+      El atributo method indica el método que se usará para enviar los datos del formulario. (GET o POST)
+        
+        El método GET permite enviar datos a través de la url del archivo.
+        Los datos que se envíen por éste método no deben de ser confidenciales, porque pueden ser vistos por alguien más.
+        El tamaño de datos que se puede enviar es limitado. (2048 caracteres).
+        Es un método inseguro para enviar datos.
+
+        El método POST permite enviar datos a través de un mecanismo seguro.
+        Las peticiones que se envían por éste método no se guardan en la memoria cache del navegador.
+        Las peticiones que se envían por éste método no se guardan en el historial del navegador.
+        El tamaño de datos que se pueden enviar es ilimitado.
+        Es un método seguro para enviar datos.
+
+      El atributo accept-charset indica el tipo de codificación de caracter que se usará para enviar los datos.
+      El atributo autocomplete permite guardar los datos enviados y usarlos para autocompletar en un futuro.
+
+    -->
+
+    <form action = "save_data.php" method = "post" accept-charset = "utf-8" autocomplete = "off">
+
+      <fieldset> <!-- Inidica una sección del fomrulario. -->
+
+        <legend> Entrada de Texto </legend> <!-- Indica una leyenda para un conjunto de campos del formulario. -->
+
+        <label for = "name"> Nombre: </label> <!-- Indica una etiqueta para alguna entrada en particular. -->
+        <input type = "text" id = "name" name = "name" value = "Jose" maxlength = "100" required> <!-- Indica un campo de entrada de datos del formulario. -->
+        <br>                                                                                      <!-- El atributo maxlength permite indicar la catidad máxima de caracteres que se pueden ingresar. -->
+                                                                                                  <!-- El atributo required permite indicar que el campo es obligatorio para completar el formulario. -->
+        <!--
+
+          El atributo for sirve para indicar a que elemento pertenece la etiqueta. (Se usa el atributo id para relacionarlos).
+          El atributo type indica el tipo de entrada de dato.
+          El atributo id indica un identificador unico para el elemento.
+          El atributo name indica un identificador de grupo para el elemento.
+          El atributo value indica el valor del elemento de entrada.
+
+        -->
+
+        <label for = "email"> Correo Electronico: </label>
+        <input type = "email" id = "email" name = "email" value = "jose@desmus.com">
+        <br>
+
+        <label for = "password"> Contraseña: </label>
+        <input type = "password" id = "password" name = "password" value = "**********">
+        <br>
+
+        <label for = "search"> Buscar: </label>
+        <input type = "search" id = "search" name = "search" value = "desmus">
+        <br>
+
+        <label for = "web-site"> Sitio Web: </label>
+        <input type = "url" id = "web-site" name = "web-site" value = "https://www.desmus.com">
+        <br>
+
+        <label for = "description"> Descripción </label>
+        <textarea> Escribe una descripción ... </textarea>
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend> Entrada de Numeros </legend>
+
+        <label for = "age"> Edad: </label>
+        <input type = "number" id = "age" name = "age" value = "18">
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend> Selección </legend>
+
+        <label for = "language_option"> Selecciona un idioma: </label>
+        <select id = "language_option" name = "language_option">
+
+          <option value = "spanish"> Español </option>
+          <option value = "english"> Ingles </option>
+          <option value = "german"> Alemán </option>
+
+        </select>
+        <br>
+
+        <label for = "spoken_languages"> Selecciona los idiomas que hablas: </label>
+        <select id = "spoken_languages" name = "spoken_languages" multiple> <!-- El atributo multiple permite que se seleccione más de una opción. -->
+
+          <option value = "spanish"> Español </option>
+          <option value = "english"> Ingles </option>
+          <option value = "german"> Alemán </option>
+
+        </select>
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend> Radio Button </legend>
+
+        <input type = "radio" id = "male" name = "gender" value = "male">
+        <label for = "male"> Hombre </label>
+        <br>
+
+        <input type = "radio" id = "famale" name = "gender" value = "female">
+        <label for = "female"> Mujer </label>
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend> Checkbox </legend>
+
+        <input type = "checkbox" id = "age-option" name = "age-option" value = "true">
+        <label for = "age-option"> Soy mayor de edad </label>
+        <br>
+
+        <input type = "checkbox" id = "family-option" name = "family-option" value = "false">
+        <label for = "age-option"> Tengo hijos </label>
+        <br>
+
+        <input type = "checkbox" id = "civil-status-option" name = "civil-status-option" value = "false">
+        <label for = "civil-status-option"> Soy casado </label>
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend> Color </legend>
+
+        <label for = "color"> Selecciona un Color: </label>
+        <input type = "color" id = "color" name = "color">
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend> Fecha </legend>
+
+        <label for = "birthdate"> Fecha de Nacimiento: </label>
+        <input type = "date" id = "birthdate" name = "birthdate">
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend> Fecha y Hora </legend>
+
+        <label for = "birthdate-time"> Fecha y Hora de Nacimiento: </label>
+        <input type = "datetime" id = "birthdate-time" name = "birthdate-time">
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend> Mes </legend>
+
+        <label for = "birthdate-month"> Mes de Nacimiento: </label>
+        <input type = "month" id = "birthdate-month" name = "birthdate-month">
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend> Rango de Valores </legend>
+
+        <label for = "brothers-quantity"> Número de Hermanos: </label>
+        <input type = "range" id = "brothers-quantity" name = "brothers-quantity" min = "0" max = "20">
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend> Telefono </legend>
+
+        <label for = "telephone"> Número de Telefono: </label>
+        <input type = "tel" id = "telephone" name = "telephone">
+
+      </fieldset>
+
+      <fieldset>
+
+        <legend> Hora </legend>
+
+        <label for = "alarm"> Hora de Alarma: </label>
+        <input type = "time" id = "alarm" name = "alarm">
+
+      </fieldset>
+
+      <input type = "submit">
+
+    </form>
+
+    <!-- Cuando subimos archivos en un formulario tenemos que usar el atributo enctype con el valor multipart/form-data. -->
+
+    <form action = "save_data.php" method = "post" enctype = "multipart/form-data" autocomplete = "off">
+
+      <fieldset>
+
+        <legend> Subir Archivo </legend>
+    
+        <label for = "file"> Archivo: </label>
+        <input type = "file" id = "file" name = "file">
+    
+      </fieldset>
+
+      <input type = "submit">
+
+    </form>
+
+  </body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang = "es"> <!-- El atributo lang indica el idioma del archivo HTML. -->
+
+  <head>
+
+    <!-- Etiquetas de metadatos para navegadores web. -->
+
+    <meta charset = "UTF-8">
+    <meta name = "description" content = "Descripción del Sitio Web">
+    <meta name = "keywords" content = "palabra_1, palabra_2, palabra_3">
+    <meta name = "author" content = "Nombre del Autor">
+
+    <!-- Etiquetas de metadatos para redes sociales. -->
+
+    <meta property = "og:title" content = "Título de la Página">
+    <meta property = "og:description" content = "Descripción de la Página">
+    <meta property = "og:url" content = "Liga del Sitio">
+
+    <!-- Enlace de imagen favicon. -->
+
+    <link rel = "icon" type = "image/x-icon" href = "assets/images/favicon.ico">
+
+    <!-- Título de la página -->
+
+    <title> Título de la Página </title>
+
+  </head>
+
+  <body>
+
+    <!-- Dirección absoluta -->
+
+    <a href = "https://yt3.ggpht.com/cjk0VcQ1AHrFj1D984z-HuiKwW-o1a3iY9q9NAvsgOVb81cRnNbiW6ky85JHfpfXmKeyQq2NXA=s88-c-k-c0x00ffffff-no-rj"> Logo </a> <br>
+
+    <!-- Direcciones relativas -->
+
+    <a href = "/C:/Users/Jose/Desktop/HTML/assets/images/logo.png"> Logo </a> <br> <!-- Carpeta raíz (C:) -->
+    <a href = "assets/images/logo.png"> Logo </a> <br> <!-- Carpeta actual (HTML) -->
+    <a href = "../logo.png"> Logo </a> <br> <!-- Una carpeta antes (Desktop) -->
+
+    <hr>
+
+    <video style = "width: 400px;" controls> <!-- Elemento de video que muestra los controles básicos. -->
+
+      <source src = "assets/videos/video.mp4" type = "video/mp4">
+
+      El navegador no soporta videos.
+
+    </video>
+
+    <hr>
+
+    <audio controls> <!-- Elemento de audio que muestra los controles básicos. -->
+
+      <source src = "assets/audios/audio.mp3" type = "audio/mp3">
+
+      El navegador no soporta auidos.
+
+    </audio>
+
+    <br>
+    <hr>
+
+    <!-- Elemento iframe que muestra el vídeo directamente desde el sitio de youtube. -->
+
+    <iframe width = "560" height = "315" src = "https://www.youtube.com/embed/8Qd-VEq1HWI" title = "YouTube video player" frameborder = "0" allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+
+  </body>
+
+</html>
